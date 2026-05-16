@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+
+    --background: 16 12% 8%;
+    --foreground: 36 30% 84%;
+    --card: 16 10% 12%;
+    --card-foreground: 36 30% 84%;
+    --popover: 16 10% 12%;
+    --popover-foreground: 36 30% 84%;
+    --primary: 0 80% 25%;
+    --primary-foreground: 36 30% 92%;
+    --secondary: 36 30% 50%;
+    --secondary-foreground: 16 12% 8%;
+    --muted: 16 8% 16%;
+    --muted-foreground: 36 15% 55%;
+    --accent: 36 30% 50%;
+    --accent-foreground: 16 12% 8%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 36 15% 20%;
+    --input: 36 15% 20%;
+    --ring: 36 30% 50%;
+    --chart-1: 0 80% 25%;
+    --chart-2: 36 30% 50%;
+    --chart-3: 16 12% 30%;
+    --chart-4: 20 60% 45%;
+    --chart-5: 36 50% 60%;
+    --radius: 0.75rem;
+    --sidebar-background: 16 10% 10%;
+    --sidebar-foreground: 36 30% 84%;
+    --sidebar-primary: 0 80% 25%;
+    --sidebar-primary-foreground: 36 30% 92%;
+    --sidebar-accent: 16 8% 16%;
+    --sidebar-accent-foreground: 36 30% 84%;
+    --sidebar-border: 36 15% 20%;
+    --sidebar-ring: 36 30% 50%;
+  }
+
+  .dark {
+    --background: 16 12% 8%;
+    --foreground: 36 30% 84%;
+    --card: 16 10% 12%;
+    --card-foreground: 36 30% 84%;
+    --popover: 16 10% 12%;
+    --popover-foreground: 36 30% 84%;
+    --primary: 0 80% 25%;
+    --primary-foreground: 36 30% 92%;
+    --secondary: 36 30% 50%;
+    --secondary-foreground: 16 12% 8%;
+    --muted: 16 8% 16%;
+    --muted-foreground: 36 15% 55%;
+    --accent: 36 30% 50%;
+    --accent-foreground: 16 12% 8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 36 15% 20%;
+    --input: 36 15% 20%;
+    --ring: 36 30% 50%;
+    --chart-1: 0 80% 25%;
+    --chart-2: 36 30% 50%;
+    --chart-3: 16 12% 30%;
+    --chart-4: 20 60% 45%;
+    --chart-5: 36 50% 60%;
+    --sidebar-background: 16 10% 10%;
+    --sidebar-foreground: 36 30% 84%;
+    --sidebar-primary: 0 80% 25%;
+    --sidebar-primary-foreground: 36 30% 92%;
+    --sidebar-accent: 16 8% 16%;
+    --sidebar-accent-foreground: 36 30% 84%;
+    --sidebar-border: 36 15% 20%;
+    --sidebar-ring: 36 30% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .glass {
+    background: rgba(26, 17, 16, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(179, 139, 77, 0.15);
+  }
+  .glass-light {
+    background: rgba(232, 220, 196, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(179, 139, 77, 0.12);
+  }
+  .glass-strong {
+    background: rgba(43, 43, 43, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(179, 139, 77, 0.2);
+  }
+  .text-gold {
+    color: #B38B4D;
+  }
+  .text-parchment {
+    color: #E8DCC4;
+  }
+  .text-wine {
+    color: #720E0E;
+  }
+  .bg-obsidian {
+    background-color: #1A1110;
+  }
+  .bg-charcoal {
+    background-color: #2B2B2B;
+  }
+  .border-gold {
+    border-color: rgba(179, 139, 77, 0.3);
+  }
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+}
