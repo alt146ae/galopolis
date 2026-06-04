@@ -25,7 +25,7 @@ const infoItems = [
 const socials = [
   { icon: Instagram, label: 'Instagram', href: '#' },
   { icon: Facebook, label: 'Facebook', href: '#' },
-  { icon: MessageCircle, label: 'WhatsApp', href: '#' },
+  { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/522414140571' },
 ];
 
 export default function InfoSection() {
