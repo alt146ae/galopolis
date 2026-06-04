@@ -119,10 +119,7 @@ export default function InfoSection() {
 
             {/* Action buttons */}
             <div className="flex flex-wrap gap-3">
-              <button className="flex items-center gap-2 px-6 py-3 bg-wine hover:bg-wine/80 text-parchment text-sm tracking-wider uppercase rounded-sm transition-all duration-500 shadow-lg shadow-wine/20">
-                <Navigation size={16} />
-                Cómo llegar
-              </button>
+              
                 <a
   href="https://www.google.com/maps/place/Galeria+Cafe+Galopolis/@19.4154526,-98.1369747,824m/data=!3m2!1e3!4b1!4m6!3m5!1s0x85d02143d76ddab9:0xe6e42c2eb701a976!8m2!3d19.4154526!4d-98.1369747!16s%2Fg%2F11w7p4r61x?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
   target="_blank"
@@ -137,7 +134,11 @@ export default function InfoSection() {
                 <CalendarCheck size={16} />
                 Reservar
               </button> */}
-              <button className="flex items-center gap-2 px-6 py-3 glass text-gold hover:text-parchment text-sm tracking-wider uppercase rounded-sm transition-all duration-500">
+              <button className="flex items-center gap-2 px-6 py-3 glass text-gold hover:text-parchment text-sm tracking-wider uppercase rounded-sm transition-all duration-500"
+                target="_blank"
+                onClick={() => window.open('https://www.instagram.com/galeriacafegalopolis?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank')}
+                
+                >
                 <Instagram size={16} />
                 Instagram
               </button>
