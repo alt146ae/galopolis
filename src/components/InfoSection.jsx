@@ -8,6 +8,7 @@ const infoItems = [
     icon: MapPin,
     title: 'Ubicación',
     text: 'C. 5 de Febrero, Centro, 90300 Ciudad de Apizaco, Tlaxcala, México',
+    link: 'https://share.google/On2jjGiBFghanmoQa',
   },
   {
     icon: Clock,
@@ -64,9 +65,26 @@ export default function InfoSection() {
                   <Icon size={24} />
                 </div>
                 <h3 className="font-serif text-xl text-parchment mb-3">{item.title}</h3>
-                <p className="text-parchment/50 text-sm whitespace-pre-line leading-relaxed">
+                 {item.link ? (
+                   <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                        className="text-parchment/50 text-sm whitespace-pre-line leading-relaxed hover:text-gold transition-colors"
+    >
                   {item.text}
-                </p>
+  </a>
+) : (
+  <p className="text-parchment/50 text-sm whitespace-pre-line leading-relaxed">
+    {item.text}
+  </p>
+)}
+                 
+                 
+                 
+                  {/* <p className="text-parchment/50 text-sm whitespace-pre-line leading-relaxed">
+                    {item.text}
+                  </p> */}
               </motion.div>
             );
           })}
@@ -105,10 +123,20 @@ export default function InfoSection() {
                 <Navigation size={16} />
                 Cómo llegar
               </button>
-              <button className="flex items-center gap-2 px-6 py-3 glass text-gold hover:text-parchment text-sm tracking-wider uppercase rounded-sm transition-all duration-500">
+                <a
+  href="https://www.google.com/maps/place/Galeria+Cafe+Galopolis/@19.4154526,-98.1369747,824m/data=!3m2!1e3!4b1!4m6!3m5!1s0x85d02143d76ddab9:0xe6e42c2eb701a976!8m2!3d19.4154526!4d-98.1369747!16s%2Fg%2F11w7p4r61x?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 px-6 py-3 bg-wine hover:bg-wine/80 text-parchment text-sm tracking-wider uppercase rounded-sm transition-all duration-500 shadow-lg shadow-wine/20"
+>
+  <Navigation size={16} />
+  Cómo llegar
+</a>
+
+              {/* <button className="flex items-center gap-2 px-6 py-3 glass text-gold hover:text-parchment text-sm tracking-wider uppercase rounded-sm transition-all duration-500">
                 <CalendarCheck size={16} />
                 Reservar
-              </button>
+              </button> */}
               <button className="flex items-center gap-2 px-6 py-3 glass text-gold hover:text-parchment text-sm tracking-wider uppercase rounded-sm transition-all duration-500">
                 <Instagram size={16} />
                 Instagram
