@@ -7,7 +7,7 @@ const infoItems = [
   {
     icon: MapPin,
     title: 'Ubicación',
-    text: 'Apizaco, Tlaxcala, México',
+    text: 'C. 5 de Febrero, Centro, 90300 Ciudad de Apizaco, Tlaxcala, México',
   },
   {
     icon: Clock,
