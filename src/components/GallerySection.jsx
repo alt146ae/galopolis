@@ -1,14 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
+import img01 from '../assets/images/01.jpeg';
+import img02 from '../assets/images/02.jpeg';
+import img03 from '../assets/images/03.jpeg';
+import img04 from '../assets/images/04.jpeg';
+import img05 from '../assets/images/05.jpeg';
+import img06 from '../assets/images/06.jpeg';
 
 const galleryImages = [
-  { src: 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/4f5917352_generated_105abe77.png', alt: 'Interior rústico de la galería', span: 'row-span-2' },
-  { src: 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/adfc69721_generated_d52e3ea1.png', alt: 'Café servido artísticamente', span: '' },
-  { src: 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/dae7639b5_generated_072d9651.png', alt: 'Arte y decoración cultural', span: '' },
-  { src: 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/16c41ff4f_generated_a12b2007.png', alt: 'Iluminación cálida del café', span: 'md:col-span-2' },
-  { src: 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/3fbe324ba_generated_3a690dd9.png', alt: 'Detalles vintage y texturas', span: '' },
-  { src: 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/bc94fe5ab_generated_f800a14c.png', alt: 'Arquitectura y ambiente cultural', span: 'row-span-2' },
+  { src: img01, alt: 'Interior rústico de la galería', span: 'row-span-2' },
+  { src: img02, alt: 'Café servido artísticamente', span: '' },
+  { src: img03, alt: 'Arte y decoración cultural', span: '' },
+  { src: img04, alt: 'Iluminación cálida del café', span: 'md:col-span-2' },
+  { src: img05, alt: 'Detalles vintage y texturas', span: '' },
+  { src: img06, alt: 'Arquitectura y ambiente cultural', span: 'row-span-2' },
 ];
 
 export default function GallerySection() {
