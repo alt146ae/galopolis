@@ -12,7 +12,7 @@ const infoItems = [
   {
     icon: Clock,
     title: 'Horarios',
-    text: 'Lun - Sáb: 9:00 AM - 9:00 PM\nDom: 10:00 AM - 6:00 PM',
+    text: 'Miercoles - Lunes: 1:00 PM - 9:00 PM\nMartes: Cerrado',
   },
   {
     icon: Phone,
