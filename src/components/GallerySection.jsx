@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
 import img01 from '../assets/images/01.jpeg';
-import img02 from '../assets/images/02.jpeg';
 import img03 from '../assets/images/03.jpeg';
 import img04 from '../assets/images/04.jpeg';
 import img05 from '../assets/images/05.jpeg';
@@ -10,9 +9,9 @@ import img06 from '../assets/images/06.jpeg';
 
 const galleryImages = [
   { src: img01, alt: 'Interior rústico de la galería', span: 'row-span-2' },
-  { src: img02, alt: 'Café servido artísticamente', span: '' },
+  { src: img01, alt: 'Café servido artísticamente', span: '' },
   { src: img03, alt: 'Arte y decoración cultural', span: '' },
-  { src: img04, alt: 'Iluminación cálida del café', span: 'md:col-span-2' },
+  { src: img04, alt: 'Iluminación cálida del café', span: 'md:col-span-2',  },
   { src: img05, alt: 'Detalles vintage y texturas', span: '' },
   { src: img06, alt: 'Arquitectura y ambiente cultural', span: 'row-span-2' },
 ];
@@ -53,7 +52,7 @@ export default function GallerySection() {
                 <img
                   src={img.src}
                   alt={img.alt}
-                  className="w-full h-full min-h-[250px] object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full min-h-[250px] object-contain transition-transform duration-700 group-hover:scale-110"
                 />
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-obsidian/0 group-hover:bg-obsidian/40 transition-all duration-500" />
