@@ -16,6 +16,7 @@ const infoItems = [
     text: 'Miercoles - Lunes: 1:00 PM - 9:00 PM\nMartes: Cerrado',
   },
   {
+    link: 'https://wa.me/522414140571',
     icon: Phone,
     title: 'Teléfono',
     text: 'Contáctanos por WhatsApp',
@@ -53,40 +54,86 @@ export default function InfoSection() {
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {infoItems.map((item, i) => {
             const Icon = item.icon;
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: i * 0.15 }}
-                className="glass-light rounded-sm p-8 text-center group hover:border-gold/30 transition-all duration-500"
-              >
-                <div className="inline-flex p-4 rounded-full bg-wine/15 text-gold mb-5 group-hover:bg-wine/25 transition-colors duration-300">
-                  <Icon size={24} />
-                </div>
-                <h3 className="font-serif text-xl text-parchment mb-3">{item.title}</h3>
-                 {item.link ? (
-                   <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                        className="text-parchment/50 text-sm whitespace-pre-line leading-relaxed hover:text-gold transition-colors"
-    >
-                  {item.text}
+            
+            
+//             return (
+//               <motion.div
+//                 key={item.title}
+//                 initial={{ opacity: 0, y: 30 }}
+//                 animate={inView ? { opacity: 1, y: 0 } : {}}
+//                 transition={{ duration: 0.6, delay: i * 0.15 }}
+//                 className="glass-light rounded-sm p-8 text-center group hover:border-gold/30 transition-all duration-500"
+//               >
+//                 <div className="inline-flex p-4 rounded-full bg-wine/15 text-gold mb-5 group-hover:bg-wine/25 transition-colors duration-300">
+//                   <Icon size={24} />
+//                 </div>
+//                 <h3 className="font-serif text-xl text-parchment mb-3">{item.title}</h3>
+//                  {item.link ? (
+//                    <a
+//                       href={item.link}
+//                       target="_blank"
+//                       rel="noopener noreferrer"
+//                         className="text-parchment/50 text-sm whitespace-pre-line leading-relaxed hover:text-gold transition-colors"
+//     >
+//                   {item.text}
+//   </a>
+// ) : (
+//   <p className="text-parchment/50 text-sm whitespace-pre-line leading-relaxed">
+//     {item.text}
+//   </p>
+// )}                              
+            
+//               </motion.div>
+//             );
+
+const card = (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={inView ? { opacity: 1, y: 0 } : {}}
+    transition={{ duration: 0.6, delay: i * 0.15 }}
+    className="glass-light rounded-sm p-8 text-center group hover:border-gold/30 transition-all duration-500 cursor-pointer duration-500 h-full"
+  >
+    <div className="inline-flex p-4 rounded-full bg-wine/15 text-gold mb-5 group-hover:bg-wine/25 transition-colors duration-300">
+      <Icon size={24} />
+    </div>
+
+    <h3 className="font-serif text-xl text-parchment mb-3">
+      {item.title}
+    </h3>
+
+    <p className="text-parchment/50 text-sm whitespace-pre-line leading-relaxed">
+      {item.text}
+    </p>
+  </motion.div>
+);
+
+return item.link ? (
+  <a
+    key={item.title}
+    href={item.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block"
+  >
+    {card}
   </a>
 ) : (
-  <p className="text-parchment/50 text-sm whitespace-pre-line leading-relaxed">
-    {item.text}
-  </p>
-)}
-                 
-                 
-                 
-                  {/* <p className="text-parchment/50 text-sm whitespace-pre-line leading-relaxed">
-                    {item.text}
-                  </p> */}
-              </motion.div>
-            );
+  <div key={item.title}>
+    {card}
+  </div>
+);
+
+
+
+
+
+
+
+
+
+
+
+
           })}
         </div>
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import img06 from '../assets/images/principal.jpg';
 
-const HERO_IMG = 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/b1654888f_generated_c36a86a2.png';
+const HERO_IMG = img06;
 
 export default function HeroSection() {
   const scrollTo = (id) => {
