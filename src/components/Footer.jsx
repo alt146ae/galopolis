@@ -25,7 +25,7 @@ export default function Footer() {
           </p>
 
           {/* Social links */}
-          <div className="flex items-center justify-center gap-6 mb-10">
+          {/* <div className="flex items-center justify-center gap-6 mb-10">
             <div className="w-8 h-px bg-gold/20" />
             <a href="#" className="text-parchment/30 hover:text-gold transition-colors duration-300" aria-label="Instagram">
               <Instagram size={18} />
@@ -39,7 +39,7 @@ export default function Footer() {
               <MessageCircle size={18} />
             </a>
             <div className="w-8 h-px bg-gold/20" />
-          </div>
+          </div> */}
 
           <p className="text-parchment/20 text-xs tracking-widest uppercase">
             © {new Date().getFullYear()} Galería Café Galópolis — Apizaco, Tlaxcala

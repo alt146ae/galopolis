@@ -23,9 +23,9 @@ const infoItems = [
 ];
 
 const socials = [
-  { icon: Instagram, label: 'Instagram', href: '#' },
-  { icon: Facebook, label: 'Facebook', href: '#' },
-  { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/522414140571' },
+  { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/galeriacafegalopolis/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D'},
+  { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61556116239441' },
+  { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/522414140571'  },
 ];
 
 export default function InfoSection() {
@@ -108,6 +108,8 @@ export default function InfoSection() {
                   <a
                     key={s.label}
                     href={s.href}
+                    target={"_blank"}
+                    rel="noopener noreferrer"
                     className="p-3 glass rounded-sm text-parchment/50 hover:text-gold hover:border-gold/30 transition-all duration-300"
                     aria-label={s.label}
                   >
@@ -130,18 +132,7 @@ export default function InfoSection() {
   Cómo llegar
 </a>
 
-              {/* <button className="flex items-center gap-2 px-6 py-3 glass text-gold hover:text-parchment text-sm tracking-wider uppercase rounded-sm transition-all duration-500">
-                <CalendarCheck size={16} />
-                Reservar
-              </button> */}
-              <button className="flex items-center gap-2 px-6 py-3 glass text-gold hover:text-parchment text-sm tracking-wider uppercase rounded-sm transition-all duration-500"
-                target="_blank"
-                onClick={() => window.open('https://www.instagram.com/galeriacafegalopolis?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank')}
-                
-                >
-                <Instagram size={16} />
-                Instagram
-              </button>
+              
             </div>
           </div>
         </motion.div>
