@@ -3,20 +3,32 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
 import { Coffee, Snowflake, Sparkles, Cake, Croissant } from 'lucide-react';
 
-import escaramucera from '../assets/images/Especiales/escaramucera.jpeg';
-import vaqueras from '../assets/images/Especiales/vaqueras.png';
-import milAmores from '../assets/images/Especiales/mil-amores.png';
-import postre from '../assets/images/postre/postre.png';
-
+/*calientes */ 
 import capuchino from '../assets/images/caliente/capuchino.jpeg';
 import xpreso from '../assets/images/caliente/xpreso.jpeg';
 import xpreso6 from '../assets/images/caliente/xpreso6.jpeg';
 
-const SPECIAL_IMAGES = {
-  'Mil Amores': milAmores,
-  'Escaramucera': escaramucera,
-  'Vaqueras': vaqueras,
-};
+/*frios */ 
+/*especiales */ 
+import escaramucera from '../assets/images/Especiales/escaramucera.jpeg';
+import vaqueras from '../assets/images/Especiales/vaqueras.png';
+import milAmores from '../assets/images/Especiales/mil-amores.png';
+
+/*postres */ 
+import postre1 from '../assets/images/postre/postre1.jpg';
+import crepa from '../assets/images/postre/crepa.jpeg';
+import pasteles from '../assets/images/postre/pasteles.png';
+import rebanada from '../assets/images/postre/rebanada.jpeg';
+
+
+/*snacks */ 
+
+import snack1 from '../assets/images/snack/1.jpeg';
+import snack2 from '../assets/images/snack/2.jpeg';
+import snack3 from '../assets/images/snack/3.jpeg';
+import snack4 from '../assets/images/snack/4.jpeg';
+import snack5 from '../assets/images/snack/5.jpeg';
+import ensalada from '../assets/images/snack/ensalada.jpeg';
 
 const calientes = {
   'capuchino': capuchino,
@@ -24,11 +36,37 @@ const calientes = {
   'xpreso6': xpreso6,
 };
 
+const frios = {
+  'capuchino': capuchino,
+  'xpreso': xpreso,
+  'xpreso6': xpreso6,
+};
+
+const SPECIAL_IMAGES = {
+  'Mil Amores': milAmores,
+  'Escaramucera': escaramucera,
+  'Vaqueras': vaqueras,
+};
+
+const postres = {
+  'crepa': crepa,
+  'xpreso': xpreso,
+  'xpreso6': xpreso6,
+};
+
+const snacks = {
+  'capuchino': capuchino,
+  'xpreso': xpreso,
+  'xpreso6': xpreso6,
+};
+
+
+
 
 const MENU_IMAGES = {
-  hot: 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/28659f6df_generated_df38c854.png',
+  hot: xpreso,
   cold: 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/c657d4d14_generated_4616068d.png',
-  desserts: postre,
+  desserts: crepa,
   snacks: 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/e3c407a9a_generated_b8f85ea9.png',
 };
 
