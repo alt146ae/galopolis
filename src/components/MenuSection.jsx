@@ -3,10 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
 import { Coffee, Snowflake, Sparkles, Cake, Croissant } from 'lucide-react';
 
-import escaramucera from '../assets/images/escaramucera.png';
-import vaqueras from '../assets/images/vaqueras.png';
-import milAmores from '../assets/images/mil-amores.png';
-import postre from '../assets/images/postre.png';
+import escaramucera from '../assets/images/Especiales/escaramucera.jpeg';
+import vaqueras from '../assets/images/Especiales/vaqueras.png';
+import milAmores from '../assets/images/Especiales/mil-amores.png';
+import postre from '../assets/images/postre/postre.png';
+
+import capuchino from '../assets/images/caliente/capuchino.jpeg';
+import xpreso from '../assets/images/caliente/xpreso.jpeg';
+import xpreso6 from '../assets/images/caliente/xpreso6.jpeg';
 
 const SPECIAL_IMAGES = {
   'Mil Amores': milAmores,
@@ -14,13 +18,16 @@ const SPECIAL_IMAGES = {
   'Vaqueras': vaqueras,
 };
 
-
+const calientes = {
+  'capuchino': capuchino,
+  'xpreso': xpreso,
+  'xpreso6': xpreso6,
+};
 
 
 const MENU_IMAGES = {
   hot: 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/28659f6df_generated_df38c854.png',
   cold: 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/c657d4d14_generated_4616068d.png',
-  special: escaramucera,
   desserts: postre,
   snacks: 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/e3c407a9a_generated_b8f85ea9.png',
 };
@@ -45,6 +52,7 @@ export default function MenuSection() {
   const [active, setActive] = useState('hot');
   const [ref, inView] = useInView(0.1);
   const [selectedDrink, setSelectedDrink] = useState('Escaramucera');
+  const [caliente, setcaliente] = useState('xpreso');
 
   return (
     <section id="menu" ref={ref} className="relative py-32 px-6 overflow-hidden grain">

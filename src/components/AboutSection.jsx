@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
+import nosotros from '../assets/images/nosotros.jpeg';
 
-const ABOUT_IMG = 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/eaf6dcc92_generated_db1f13fc.png';
+const ABOUT_IMG = nosotros ;
 
 export default function AboutSection() {
   const [ref, inView] = useInView(0.2);
