@@ -23,7 +23,7 @@ export default function AboutSection() {
               <img
                 src={ABOUT_IMG}
                 alt="Espresso artístico en ambiente vintage"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-auto rounded-sm"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian/40 to-transparent" />
             </div>

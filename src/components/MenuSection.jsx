@@ -15,9 +15,9 @@ import vaqueras from '../assets/images/Especiales/vaqueras.png';
 import milAmores from '../assets/images/Especiales/mil-amores.png';
 
 /*postres */ 
-import postre1 from '../assets/images/postre/postre1.jpg';
 import crepa from '../assets/images/postre/crepa.jpeg';
 import pasteles from '../assets/images/postre/pasteles.png';
+import helado from '../assets/images/postre/helado.jpg';
 import rebanada from '../assets/images/postre/rebanada.jpeg';
 
 
@@ -49,15 +49,19 @@ const SPECIAL_IMAGES = {
 };
 
 const postres = {
-  'crepa': crepa,
-  'xpreso': xpreso,
-  'xpreso6': xpreso6,
+  'Crepa': crepa,
+  'Pasteles': pasteles,
+  'Helado': helado,
+  'Rebanada de Zarzamora': rebanada,
 };
 
 const snacks = {
-  'capuchino': capuchino,
-  'xpreso': xpreso,
-  'xpreso6': xpreso6,
+  'Snack1': snack1,
+  'Snack2': snack2,
+  'Snack3': snack3,
+  'Snack4': snack4,
+  'Snack5': snack5,
+  'Ensalada': ensalada,
 };
 
 
@@ -82,8 +86,8 @@ const menuItems = {
   hot: ['Espresso', 'Americano', 'Cappuccino', 'Latte', 'Mocha'],
   cold: ['Cold Brew', 'Iced Latte', 'Frappé de café'],
   special: ['Mil Amores', 'Escaramucera', 'Vaqueras'],
-  desserts: ['Cheesecake', 'Pastel de chocolate', 'Pay', 'Galletas artesanales'],
-  snacks: ['Croissants', 'Panini', 'Toasts'],
+  desserts: ['Crepa', 'Pasteles', 'Helado', 'Rebanada de Zarzamora'],
+  snacks: ['Snack1', 'Snack2', 'Snack3', 'Snack4', 'Snack5', 'Ensalada'],
 };
 
 export default function MenuSection() {
@@ -91,6 +95,8 @@ export default function MenuSection() {
   const [ref, inView] = useInView(0.1);
   const [selectedDrink, setSelectedDrink] = useState('Escaramucera');
   const [caliente, setcaliente] = useState('xpreso');
+  const [selectedDessert, setSelectedDessert] = useState('Pasteles');
+  const [selectedSnack, setSelectedSnack] = useState('Ensalada');
 
   return (
     <section id="menu" ref={ref} className="relative py-32 px-6 overflow-hidden grain">
@@ -156,6 +162,10 @@ export default function MenuSection() {
                  src={
                     active === 'special'
                     ? SPECIAL_IMAGES[selectedDrink]
+                    : active === 'desserts'
+                    ? postres[selectedDessert]
+                    : active === 'snacks'
+                    ? snacks[selectedSnack]
                       : MENU_IMAGES[active]
                         }
                         alt={categories.find(c => c.id === active)?.label}
@@ -177,19 +187,28 @@ export default function MenuSection() {
       if (active === 'special') {
         setSelectedDrink(item);
       }
-    }}
+       if (active === 'desserts') {
+    setSelectedDessert(item);
+          }
+        if (active === 'snacks') {
+          setSelectedSnack(item);
+    }}  }
     initial={{ opacity: 0, x: 20 }}
     animate={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.4, delay: i * 0.1 }}
     className={`flex items-center gap-4 group w-full text-left ${
-      active === 'special' && selectedDrink === item
+      (active === 'special' && selectedDrink === item) ||
+  (active === 'desserts' && selectedDessert === item) 
+    || (active === 'snacks' && selectedSnack === item)
         ? 'text-gold'
         : ''
     }`}
   >
     <div
       className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${
-        active === 'special' && selectedDrink === item
+         (active === 'special' && selectedDrink === item) ||
+        (active === 'desserts' && selectedDessert === item)
+        || (active === 'snacks' && selectedSnack === item)
           ? 'bg-gold'
           : 'bg-gold/40'
       }`}
