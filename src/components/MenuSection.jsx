@@ -69,9 +69,9 @@ const snacks = {
 
 const MENU_IMAGES = {
   hot: xpreso,
-  cold: 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/c657d4d14_generated_4616068d.png',
+  cold: capuchino,
   desserts: crepa,
-  snacks: 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/e3c407a9a_generated_b8f85ea9.png',
+  snacks: snack1,
 };
 
 const categories = [
