@@ -9,9 +9,9 @@ import img06 from '../assets/images/06.jpeg';
 
 const galleryImages = [
   { src: img01, alt: 'Interior rústico de la galería', span: 'row-span-2' },
-  { src: img01, alt: 'Café servido artísticamente', span: '' },
+  { src: img01, alt: 'Café servido artísticamente', span: 'row-span-2' },
   { src: img03, alt: 'Arte y decoración cultural', span: '' },
-  { src: img04, alt: 'Iluminación cálida del café', span: 'md:col-span-2',  },
+  { src: img04, alt: 'Iluminación cálida del café', span: 'row-span-2'  },
   { src: img05, alt: 'Detalles vintage y texturas', span: '' },
   { src: img06, alt: 'Arquitectura y ambiente cultural', span: 'row-span-2' },
 ];
@@ -62,7 +62,7 @@ export default function GallerySection() {
                   </div>
                 </div>
                 {/* Gold border on hover */}
-                <div className="absolute inset-0 border border-gold/0 group-hover:border-gold/30 transition-all duration-500 rounded-sm" />
+                <div className="w-full h-[100px] object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>
             </motion.div>
           ))}

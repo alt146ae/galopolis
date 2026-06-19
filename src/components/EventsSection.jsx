@@ -1,20 +1,28 @@
-import React from 'react';
+import React ,{useState} from 'react';
+
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
 import { Palette, Music, Users, Sparkles, Lightbulb } from 'lucide-react';
 
-const EVENTS_IMG = 'https://media.base44.com/images/public/69fe2b1edef0e9a0e49ee2f9/f8d9ea009_generated_f801943f.png';
+import expo1 from '../assets/images/Eventos/expo1.jpg';
+import musica from '../assets/images/Eventos/musica1.jpeg';
+import evento from '../assets/images/Eventos/evento1.jpg';
+import noche from '../assets/images/Eventos/noches1.jpg';
+import reunion from '../assets/images/Eventos/reunion1.jpg';
+
+const EVENTS_IMG = expo1;
 
 const events = [
-  { icon: Palette, title: 'Exposiciones', desc: 'Artistas locales y colecciones rotativas' },
-  { icon: Music, title: 'Música en vivo', desc: 'Noches acústicas e íntimas' },
-  { icon: Users, title: 'Eventos culturales', desc: 'Charlas, lecturas y debates' },
-  { icon: Sparkles, title: 'Noches de arte', desc: 'Talleres creativos y arte en vivo' },
-  { icon: Lightbulb, title: 'Reuniones creativas', desc: 'Networking y comunidad local' },
+  { icon: Palette, title: 'Exposiciones', desc: 'Artistas locales y colecciones rotativas' , img: expo1},
+  { icon: Music, title: 'Música en vivo', desc: 'Noches acústicas e íntimas' , img: musica},
+  { icon: Users, title: 'Eventos culturales', desc: 'Charlas, lecturas y debates', img: evento },
+  { icon: Sparkles, title: 'Noches de arte', desc: 'Talleres creativos y arte en vivo', img: noche },
+  { icon: Lightbulb, title: 'Reuniones creativas', desc: 'Networking y comunidad local', img: reunion },
 ];
 
 export default function EventsSection() {
   const [ref, inView] = useInView(0.1);
+  const [selectedImage, setSelectedImage] = useState(events[0].img);
 
   return (
     <section id="events" ref={ref} className="relative py-32 px-6 overflow-hidden grain">
@@ -46,27 +54,37 @@ export default function EventsSection() {
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1 }}
-            className="relative rounded-sm overflow-hidden"
+            className="relative rounded-sm overflow-hidden bg-obsidian/40"
           >
-            <img
-              src={EVENTS_IMG}
-              alt="Evento de música en vivo en Galería Café Galópolis"
-              className="w-full h-[450px] object-cover"
+            <motion.img
+              key={selectedImage}
+              src={selectedImage}
+              alt="Evento en Galería Café Galópolis"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4 }}
+              className="w-full h-[450px] object-contain"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-obsidian/70 via-transparent to-obsidian/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-obsidian/70 via-transparent to-obsidian/20 pointer-events-none" />
           </motion.div>
 
           {/* Events list */}
           <div className="space-y-5">
             {events.map((event, i) => {
               const Icon = event.icon;
+              const isActive = selectedImage === event.img;
+
               return (
-                <motion.div
+                <motion.button
+                  type="button"
                   key={event.title}
+                  onClick={() => setSelectedImage(event.img)}
                   initial={{ opacity: 0, x: 30 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
-                  className="glass-light rounded-sm p-5 flex items-start gap-4 group hover:border-gold/30 transition-all duration-500"
+                  className={`w-full text-left glass-light rounded-sm p-5 flex items-start gap-4 group transition-all duration-500 ${
+                    isActive ? 'border-gold/50 bg-gold/10' : 'hover:border-gold/30'
+                  }`}
                 >
                   <div className="p-3 rounded-sm bg-wine/20 text-gold group-hover:bg-wine/30 transition-colors duration-300">
                     <Icon size={20} />
@@ -75,7 +93,7 @@ export default function EventsSection() {
                     <h3 className="font-serif text-xl text-parchment mb-1">{event.title}</h3>
                     <p className="text-parchment/50 text-sm">{event.desc}</p>
                   </div>
-                </motion.div>
+                </motion.button>
               );
             })}
           </div>
