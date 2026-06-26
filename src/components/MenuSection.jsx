@@ -13,6 +13,8 @@ import xpreso6 from '../assets/images/caliente/xpreso6.jpeg';
 import escaramucera from '../assets/images/Especiales/escaramucera.jpeg';
 import vaqueras from '../assets/images/Especiales/vaqueras.png';
 import milAmores from '../assets/images/Especiales/mil-amores.png';
+import chacorta from '../assets/images/Especiales/chacorta.jpeg';
+
 
 /*postres */ 
 import crepa from '../assets/images/postre/crepa.jpeg';
@@ -46,21 +48,22 @@ const SPECIAL_IMAGES = {
   'Mil Amores': milAmores,
   'Escaramucera': escaramucera,
   'Vaqueras': vaqueras,
+  'Chacorta': chacorta,
 };
 
 const postres = {
   'Crepa': crepa,
   'Pasteles': pasteles,
-  'Helado': helado,
-  'Rebanada de Zarzamora': rebanada,
+  'Copa de Helado': helado,
+  'Postre de la casa': rebanada,
 };
 
 const snacks = {
   'Snack1': snack1,
   'Snack2': snack2,
-  'Snack3': snack3,
-  'Snack4': snack4,
-  'Snack5': snack5,
+  'Tabla de queso': snack3,
+  'Planchitas Antiguas': snack4,
+  'Planchitas Antiguas Dulces': snack5,
   'Ensalada': ensalada,
 };
 
@@ -83,11 +86,11 @@ const categories = [
 ];
 
 const menuItems = {
-  hot: ['Espresso', 'Americano', 'Cappuccino', 'Latte', 'Mocha'],
-  cold: ['Cold Brew', 'Iced Latte', 'Frappé de café'],
-  special: ['Mil Amores', 'Escaramucera', 'Vaqueras'],
-  desserts: ['Crepa', 'Pasteles', 'Helado', 'Rebanada de Zarzamora'],
-  snacks: ['Snack1', 'Snack2', 'Snack3', 'Snack4', 'Snack5', 'Ensalada'],
+  hot: ['Espresso Antiguo', 'Maquinita', 'Galope Clasico', 'Cafe Rustico', 'El Tordillo'],
+  cold: ['Romana', 'Maquinita frio', 'El Alazan', 'El Baul'],
+  special: ['Mil Amores', 'Escaramucera', 'Vaqueras', 'Chacorta'],
+  desserts: ['Postre de la casa', 'Pasteles', 'Copa de Helado' ],
+  snacks: ['Tabla de queso', 'Planchitas Antiguas', 'Planchitas Antiguas Dulces', 'Ensalada'],
 };
 
 export default function MenuSection() {
@@ -115,7 +118,7 @@ export default function MenuSection() {
             Nuestra carta
           </p>
           <h2 className="font-serif text-4xl md:text-6xl text-parchment font-semibold mb-4">
-            El <span className="text-gold">Menú</span>
+            <span className="text-gold">Menú</span>
           </h2>
           <div className="w-16 h-px bg-gold/40 mx-auto" />
         </motion.div>
