@@ -1,4 +1,4 @@
-import React ,{useState} from 'react';
+import React, { useState, useRef } from 'react';
 
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
@@ -19,6 +19,9 @@ const events = [
   { icon: Sparkles, title: 'Noches de arte', desc: 'Talleres creativos y arte en vivo', img: noche },
   { icon: Lightbulb, title: 'Reuniones creativas', desc: 'Networking y comunidad local', img: reunion },
 ];
+
+
+const imageRef = useRef(null);
 
 export default function EventsSection() {
   const [ref, inView] = useInView(0.1);
@@ -51,6 +54,7 @@ export default function EventsSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <motion.div
+           ref={imageRef}
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1 }}
@@ -78,7 +82,18 @@ export default function EventsSection() {
                 <motion.button
                   type="button"
                   key={event.title}
-                  onClick={() => setSelectedImage(event.img)}
+                  onClick={() => {
+  setSelectedImage(event.img);
+
+  if (window.innerWidth < 768) {
+    setTimeout(() => {
+      imageRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }, 100);
+  }
+}}
                   initial={{ opacity: 0, x: 30 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
