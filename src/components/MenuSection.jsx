@@ -12,6 +12,7 @@ import lienzo from '../assets/images/caliente/lienzo_charro.jpg';
 import capuchino from '../assets/images/caliente/capuchino.jpeg';
 
 
+
 /*frios */ 
 import romana from '../assets/images/frio/Romana_Frape.jpeg';
 
@@ -82,7 +83,7 @@ const MENU_IMAGES = {
   desserts: crepa,
   snacks: snack1,
 };
-
+/*sdfsdfsdf*/
 const categories = [
   { id: 'hot', label: 'Café caliente', icon: Coffee },
   { id: 'cold', label: 'Café frío', icon: Snowflake },
