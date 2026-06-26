@@ -13,6 +13,8 @@ import capuchino from '../assets/images/caliente/capuchino.jpeg';
 
 
 /*frios */ 
+import romana from '../assets/images/frio/Romana_Frape.jpeg';
+
 /*especiales */ 
 import escaramucera from '../assets/images/Especiales/escaramucera.jpeg';
 import vaqueras from '../assets/images/Especiales/vaqueras.png';
@@ -46,8 +48,8 @@ const calientes = {
 };
 
 const frios = {
-  'capuchino': capuchino,
-  'xpreso': xpreso,
+  'Romana': romana,
+  
   
 };
 
@@ -73,9 +75,6 @@ const snacks = {
   'Planchitas Antiguas Dulces': snack5,
   'Ensalada': ensalada,
 };
-
-
-
 
 const MENU_IMAGES = {
   hot: xpreso,
@@ -106,6 +105,7 @@ export default function MenuSection() {
   const [selectedDrink, setSelectedDrink] = useState('Escaramucera');
   const [selectedHot, setSelectedHot] = useState('Espresso Antiguo');
   const [selectedDessert, setSelectedDessert] = useState('Pasteles');
+  const [selectedCold, setSelectedCold] = useState('Romana');
   const [selectedSnack, setSelectedSnack] = useState('Ensalada');
 
   return (
@@ -178,6 +178,8 @@ export default function MenuSection() {
                     ? snacks[selectedSnack]
                     : active === 'hot'
                     ? calientes[selectedHot]
+                    : active === 'cold'
+                    ? frios[selectedCold]
                       : MENU_IMAGES[active]
                       
                         }
