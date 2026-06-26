@@ -4,9 +4,13 @@ import { useInView } from '@/hooks/useInView';
 import { Coffee, Snowflake, Sparkles, Cake, Croissant } from 'lucide-react';
 
 /*calientes */ 
-import capuchino from '../assets/images/caliente/capuchino.jpeg';
 import xpreso from '../assets/images/caliente/xpreso.jpeg';
-import xpreso6 from '../assets/images/caliente/xpreso6.jpeg';
+import maquinita from '../assets/images/caliente/maquinita.jpeg';
+import galopeclasico from '../assets/images/caliente/galopeclasico.jpeg';
+import quinque from '../assets/images/caliente/quinque.jpg';
+import lienzo from '../assets/images/caliente/lienzo_charro.jpg';
+import capuchino from '../assets/images/caliente/capuchino.jpeg';
+
 
 /*frios */ 
 /*especiales */ 
@@ -33,15 +37,18 @@ import snack5 from '../assets/images/snack/5.jpeg';
 import ensalada from '../assets/images/snack/ensalada.jpeg';
 
 const calientes = {
-  'capuchino': capuchino,
-  'xpreso': xpreso,
-  'xpreso6': xpreso6,
+  'Espresso Antiguo': xpreso,
+  'Maquinita': maquinita,
+  'Galope Clasico': galopeclasico,
+  'Quinque': quinque,
+  'Lienzo Charro': lienzo,
+  'Capuchino': capuchino,  
 };
 
 const frios = {
   'capuchino': capuchino,
   'xpreso': xpreso,
-  'xpreso6': xpreso6,
+  
 };
 
 const SPECIAL_IMAGES = {
@@ -86,7 +93,7 @@ const categories = [
 ];
 
 const menuItems = {
-  hot: ['Espresso Antiguo', 'Maquinita', 'Galope Clasico', 'Cafe Rustico', 'El Tordillo'],
+  hot: ['Espresso Antiguo', 'Maquinita', 'Galope Clasico', 'Quinque', 'Lienzo Charro', 'Capuchino'],
   cold: ['Romana', 'Maquinita frio', 'El Alazan', 'El Baul'],
   special: ['Mil Amores', 'Escaramucera', 'Vaqueras', 'Chacorta'],
   desserts: ['Postre de la casa', 'Pasteles', 'Copa de Helado' ],
@@ -97,7 +104,7 @@ export default function MenuSection() {
   const [active, setActive] = useState('hot');
   const [ref, inView] = useInView(0.1);
   const [selectedDrink, setSelectedDrink] = useState('Escaramucera');
-  const [caliente, setcaliente] = useState('xpreso');
+  const [selectedHot, setSelectedHot] = useState('Espresso Antiguo');
   const [selectedDessert, setSelectedDessert] = useState('Pasteles');
   const [selectedSnack, setSelectedSnack] = useState('Ensalada');
 
@@ -163,13 +170,16 @@ export default function MenuSection() {
             <div className="relative overflow-hidden rounded-sm">
               <img
                  src={
-                    active === 'special'
+                     active === 'special'
                     ? SPECIAL_IMAGES[selectedDrink]
                     : active === 'desserts'
                     ? postres[selectedDessert]
                     : active === 'snacks'
                     ? snacks[selectedSnack]
+                    : active === 'hot'
+                    ? calientes[selectedHot]
                       : MENU_IMAGES[active]
+                      
                         }
                         alt={categories.find(c => c.id === active)?.label}
                         className="w-full h-[400px] object-contain"
@@ -193,6 +203,9 @@ export default function MenuSection() {
        if (active === 'desserts') {
     setSelectedDessert(item);
           }
+        if (active === 'hot') {
+    setSelectedHot(item);
+          }
         if (active === 'snacks') {
           setSelectedSnack(item);
     }}  }
@@ -203,6 +216,7 @@ export default function MenuSection() {
       (active === 'special' && selectedDrink === item) ||
   (active === 'desserts' && selectedDessert === item) 
     || (active === 'snacks' && selectedSnack === item)
+    || (active === 'hot' && selectedHot === item)
         ? 'text-gold'
         : ''
     }`}
@@ -212,6 +226,7 @@ export default function MenuSection() {
          (active === 'special' && selectedDrink === item) ||
         (active === 'desserts' && selectedDessert === item)
         || (active === 'snacks' && selectedSnack === item)
+        || (active === 'hot' && selectedHot === item)
           ? 'bg-gold'
           : 'bg-gold/40'
       }`}
