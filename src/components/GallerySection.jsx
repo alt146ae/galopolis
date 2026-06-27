@@ -8,9 +8,9 @@ import img05 from '../assets/images/05.jpeg';
 import img06 from '../assets/images/06.jpeg';
 
 const galleryImages = [
-  { src: img01, alt: 'Interior rústico de la galería', span: 'row-span-2' },
-  { src: img01, alt: 'Café servido artísticamente', span: 'row-span-2' },
-  { src: img03, alt: 'Arte y decoración cultural', span: '' },
+  { src: img01, alt: 'Camara Fotografica', span: 'row-span-2' },
+/*  { src: img01, alt: 'Café servido artísticamente', span: 'row-span-2' },*/
+  { src: img03, alt: 'Arte y decoración cultural', span: 'row-span-2' },
   { src: img04, alt: 'Iluminación cálida del café', span: 'row-span-2'  },
   { src: img05, alt: 'Detalles vintage y texturas', span: '' },
   { src: img06, alt: 'Arquitectura y ambiente cultural', span: 'row-span-2' },
