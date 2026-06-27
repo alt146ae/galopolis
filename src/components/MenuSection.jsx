@@ -7,8 +7,8 @@ import { Coffee, Snowflake, Sparkles, Cake, Croissant } from 'lucide-react';
 import xpreso from '../assets/images/caliente/xpreso.jpeg';
 import maquinita from '../assets/images/caliente/maquinita.jpeg';
 import galopeclasico from '../assets/images/caliente/galopeclasico.jpeg';
-import quinque from '../assets/images/caliente/quinque.jpg';
-import lienzo from '../assets/images/caliente/lienzo_charro.jpg';
+import quinque from '../assets/images/caliente/quinque2.jpg';
+import lienzo from '../assets/images/caliente/lienzocharro2.jpg';
 import capuchino from '../assets/images/caliente/capuchino.jpeg';
 
 

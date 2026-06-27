@@ -21,11 +21,14 @@ const events = [
 ];
 
 
-const imageRef = useRef(null);
+
 
 export default function EventsSection() {
   const [ref, inView] = useInView(0.1);
   const [selectedImage, setSelectedImage] = useState(events[0].img);
+
+
+const imageRef = useRef(null);
 
   return (
     <section id="events" ref={ref} className="relative py-32 px-6 overflow-hidden grain">
