@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -26,6 +29,8 @@ const galleryImages = [
 export default function GallerySection() {
 
   const [ref, inView] = useInView(0.1);
+  const swiperRef = useRef(null);
+  
 
   return (
 
@@ -56,46 +61,69 @@ export default function GallerySection() {
 
         </motion.div>
 
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 3500,
-            disableOnInteraction: false,
-          }}
-          loop
-          spaceBetween={20}
-          slidesPerView={1}
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-        >
 
-          {galleryImages.map((img) => (
 
-            <SwiperSlide key={img.alt}>
 
-              <div className="overflow-hidden rounded-lg border border-gold/20 bg-charcoal">
+<div className="relative">
 
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-[420px] object-cover transition-transform duration-700 hover:scale-110"
-                />
+  <Swiper
+    modules={[Navigation, Pagination, Autoplay]}
+    onSwiper={(swiper) => {
+      swiperRef.current = swiper;
+    }}
+    pagination={{ clickable: true }}
+    autoplay={{
+      delay: 3500,
+      disableOnInteraction: false,
+    }}
+    loop
+    spaceBetween={20}
+    slidesPerView={1}
+    breakpoints={{
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    }}
+  >
+    {galleryImages.map((img) => (
+      <SwiperSlide key={img.alt}>
+        <div className="overflow-hidden rounded-lg border border-gold/20 bg-charcoal">
+          <img
+            src={img.src}
+            alt={img.alt}
+            className="w-full h-[420px] object-cover transition-transform duration-700 hover:scale-110"
+          />
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
 
-              </div>
+  {/* Botón Izquierdo */}
+  <button
+    type="button"
+    onClick={() => swiperRef.current?.slidePrev()}
+    className="glass-button absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-50"
+  >
+    <ChevronLeft size={30} color="#111" />
+  </button>
 
-            </SwiperSlide>
+  {/* Botón Derecho */}
+  <button
+    type="button"
+    onClick={() => swiperRef.current?.slideNext()}
+    className="glass-button absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-50"
+  >
+    <ChevronRight size={30} color="#111" />
+  </button>
 
-          ))}
+</div>
 
-        </Swiper>
+
+
+
 
       </div>
 
