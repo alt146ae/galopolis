@@ -18,16 +18,16 @@ import romana from '../assets/images/frio/Romana_Frape.jpeg';
 
 /*especiales */ 
 import escaramucera from '../assets/images/Especiales/escaramucera.jpeg';
-import vaqueras from '../assets/images/Especiales/vaqueras.png';
-import milAmores from '../assets/images/Especiales/mil-amores.png';
+/*import vaqueras from '../assets/images/Especiales/vaqueras.png';*/
+/*import milAmores from '../assets/images/Especiales/mil-amores.png';*/
 import chacorta from '../assets/images/Especiales/chacorta.jpeg';
 
 
 /*postres */ 
 import crepa from '../assets/images/postre/crepa.jpeg';
-import pasteles from '../assets/images/postre/pasteles.png';
+import planchadas from '../assets/images/postre/planchadasdulces.jpeg';
 import helado from '../assets/images/postre/helado.jpg';
-import rebanada from '../assets/images/postre/rebanada.jpeg';
+import pay from '../assets/images/postre/pay.jpeg';
 
 
 /*snacks */ 
@@ -50,22 +50,20 @@ const calientes = {
 
 const frios = {
   'Romana': romana,
-  
-  
 };
 
 const SPECIAL_IMAGES = {
-  'Mil Amores': milAmores,
+  /*'Mil Amores': milAmores,*/
   'Escaramucera': escaramucera,
-  'Vaqueras': vaqueras,
+  /*'Vaqueras': vaqueras,*/
   'Chacorta': chacorta,
 };
 
 const postres = {
   'Crepa': crepa,
-  'Pasteles': pasteles,
-  'Copa de Helado': helado,
-  'Postre de la casa': rebanada,
+  'Planchadas Dulces': planchadas,
+  'Pay': pay,
+  /*'Postre de la casa': rebanada,*/
 };
 
 const snacks = {
@@ -95,8 +93,8 @@ const categories = [
 const menuItems = {
   hot: ['Espresso Antiguo', 'Maquinita', 'Galope Clasico', 'Quinque', 'Lienzo Charro', 'Capuchino'],
   cold: ['Romana', 'Maquinita frio', 'El Alazan', 'El Baul'],
-  special: ['Mil Amores', 'Escaramucera', 'Vaqueras', 'Chacorta'],
-  desserts: ['Postre de la casa', 'Pasteles', 'Copa de Helado' ],
+  special: ['Escaramucera',  'Chacorta'],
+  desserts: ['Pay', 'Crepa','Planchadas Dulces' ],
   snacks: ['Tabla de queso', 'Planchitas Antiguas', 'Planchitas Antiguas Dulces', 'Ensalada'],
 };
 
@@ -105,7 +103,7 @@ export default function MenuSection() {
   const [ref, inView] = useInView(0.1);
   const [selectedDrink, setSelectedDrink] = useState('Escaramucera');
   const [selectedHot, setSelectedHot] = useState('Espresso Antiguo');
-  const [selectedDessert, setSelectedDessert] = useState('Pasteles');
+  const [selectedDessert, setSelectedDessert] = useState('Crepa');
   const [selectedCold, setSelectedCold] = useState('Romana');
   const [selectedSnack, setSelectedSnack] = useState('Ensalada');
 
