@@ -105,7 +105,7 @@ export default function GallerySection() {
   <button
     type="button"
     onClick={() => swiperRef.current?.slidePrev()}
-    className="glass-button absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-50"
+    className="glass-button absolute -left-10 top-1/2 -translate z-50"
   >
     <ChevronLeft size={30} color="#111" />
   </button>
@@ -114,7 +114,7 @@ export default function GallerySection() {
   <button
     type="button"
     onClick={() => swiperRef.current?.slideNext()}
-    className="glass-button absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-50"
+    className="glass-button absolute -right-10 top-1/2 -translate z-50"
   >
     <ChevronRight size={30} color="#111" />
   </button>
