@@ -13,7 +13,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import img01 from '../assets/images/01.jpeg';
-import img02 from '../assets/images/11.jpg';
+import img02 from '../assets/images/11.JPG';
 import img03 from '../assets/images/03.jpeg';
 import img04 from '../assets/images/04.jpeg';
 import img05 from '../assets/images/05.jpeg';
