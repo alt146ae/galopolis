@@ -9,7 +9,7 @@ export default function AboutSection() {
   const [ref, inView] = useInView(0.2);
 
   return (
-    <section id="about" ref={ref} className="relative py-32 px-6 overflow-hidden grain">
+    <section id="about" ref={ref} className="relative py-12 px-6 overflow-hidden grain">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Image */}

@@ -33,7 +33,7 @@ export default function InfoSection() {
   const [ref, inView] = useInView(0.1);
 
   return (
-    <section id="info" ref={ref} className="relative py-32 px-6 overflow-hidden grain">
+    <section id="info" ref={ref} className="relative py-12 px-6 overflow-hidden grain">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div

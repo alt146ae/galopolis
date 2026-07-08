@@ -31,7 +31,7 @@ export default function EventsSection() {
 const imageRef = useRef(null);
 
   return (
-    <section id="events" ref={ref} className="relative py-32 px-6 overflow-hidden grain">
+    <section id="events" ref={ref} className="relative py-2 px-6 overflow-hidden grain">
       <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-charcoal/20 to-obsidian" />
 
       <div className="relative z-10 max-w-6xl mx-auto">

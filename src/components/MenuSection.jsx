@@ -108,7 +108,7 @@ export default function MenuSection() {
   const [selectedSnack, setSelectedSnack] = useState('Ensalada');
 
   return (
-    <section id="menu" ref={ref} className="relative py-32 px-6 overflow-hidden grain">
+    <section id="menu" ref={ref} className="relative py-2 px-6 overflow-hidden grain">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-obsidian via-charcoal/30 to-obsidian" />
 

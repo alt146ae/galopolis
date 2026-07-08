@@ -13,10 +13,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import img01 from '../assets/images/01.jpeg';
+import img02 from '../assets/images/02.jpg';
 import img03 from '../assets/images/03.jpeg';
 import img04 from '../assets/images/04.jpeg';
 import img05 from '../assets/images/05.jpeg';
 import img06 from '../assets/images/06.jpeg';
+import img07 from '../assets/images/07.jpeg';
+import img08 from '../assets/images/08.jpeg';
+import img09 from '../assets/images/09.jpeg';
+import img10 from '../assets/images/10.jpeg';
+
+
 
 const galleryImages = [
   { src: img01, alt: 'Cámara Fotográfica' },
@@ -24,6 +31,10 @@ const galleryImages = [
   { src: img04, alt: 'Iluminación cálida del café' },
   { src: img05, alt: 'Detalles vintage y texturas' },
   { src: img06, alt: 'Arquitectura y ambiente cultural' },
+  { src: img07, alt: 'Interiores acogedores' },
+  { src: img08, alt: 'Arte contemporáneo' },
+  { src: img09, alt: 'Cultura local' },
+  { src: img10, alt: 'Experiencias únicas' },
 ];
 
 export default function GallerySection() {
@@ -37,7 +48,7 @@ export default function GallerySection() {
     <section
       id="gallery"
       ref={ref}
-      className="relative py-32 px-6 overflow-hidden grain"
+      className="relative py-12 px-6 overflow-hidden grain"
     >
 
       <div className="max-w-6xl mx-auto">
