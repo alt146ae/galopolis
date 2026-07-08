@@ -61,7 +61,7 @@ const SPECIAL_IMAGES = {
 
 const postres = {
   'Crepa': crepa,
-  'Planchadas Dulces': planchadas,
+  'Planchaditas Dulces': planchadas,
   'Pay': pay,
   /*'Postre de la casa': rebanada,*/
 };
@@ -94,7 +94,7 @@ const menuItems = {
   hot: ['Espresso Antiguo', 'Maquinita', 'Galope Clasico', 'Quinque', 'Lienzo Charro', 'Capuchino'],
   cold: ['Romana', 'Maquinita frio', 'El Alazan', 'El Baul'],
   special: ['Escaramucera',  'Chacorta'],
-  desserts: ['Pay', 'Crepa','Planchadas Dulces' ],
+  desserts: ['Pay', 'Crepa','Planchaditas Dulces' ],
   snacks: ['Tabla de queso', 'Planchitas Antiguas', 'Planchitas Antiguas Dulces', 'Ensalada'],
 };
 

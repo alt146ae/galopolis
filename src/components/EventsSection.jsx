@@ -14,7 +14,7 @@ const EVENTS_IMG = expo1;
 
 const events = [
   { icon: Palette, title: 'Exposiciones', desc: 'Artistas locales y colecciones rotativas' , img: expo1},
-  { icon: Music, title: 'Música en vivo', desc: 'Noches acústicas e íntimas' , img: musica},
+  { icon: Music, title: 'Música en vivo', desc: 'Noches acústicas' , img: musica},
   { icon: Users, title: 'Eventos culturales', desc: 'Charlas, lecturas y debates', img: evento },
   { icon: Sparkles, title: 'Noches de arte', desc: 'Talleres creativos y arte en vivo', img: noche },
   { icon: Lightbulb, title: 'Reuniones creativas', desc: 'Networking y comunidad local', img: reunion },
