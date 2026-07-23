@@ -16,17 +16,17 @@ const infoItems = [
     text: 'Miercoles a Lunes: 3:00 PM - 11:00 PM\nViernes: 3:00 PM - 1:00 AM\nMartes: Cerrado',
   },
   {
-    link: 'https://wa.me/522414140571',
+    link: 'https://wa.me/522411107085',
     icon: Phone,
     title: 'Teléfono',
-    text: 'Contáctanos por WhatsApp',
+    text: 'Da click para contáctarnos por WhatsApp',
   },
 ];
 
 const socials = [
   { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/galeriacafegalopolis/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D'},
   { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61556116239441' },
-  { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/522414140571'  },
+  { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/522411107085'  },
 ];
 
 export default function InfoSection() {
