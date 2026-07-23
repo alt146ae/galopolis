@@ -13,7 +13,7 @@ const infoItems = [
   {
     icon: Clock,
     title: 'Horarios',
-    text: 'Miercoles - Lunes: 3:00 PM - 11:00 PM\nViernes: 3:00 PM - 1:00 AM\nMartes: Cerrado',
+    text: 'Miercoles a Lunes: 3:00 PM - 11:00 PM\nViernes: 3:00 PM - 1:00 AM\nMartes: Cerrado',
   },
   {
     link: 'https://wa.me/522414140571',
