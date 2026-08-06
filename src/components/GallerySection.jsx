@@ -22,6 +22,22 @@ import img07 from '../assets/images/07.jpeg';
 import img08 from '../assets/images/08.jpeg';
 import img09 from '../assets/images/09.jpeg';
 import img10 from '../assets/images/10.jpeg';
+import img11 from '../assets/images/11.JPG';
+import img12 from '../assets/images/12.jpg';
+import img13 from '../assets/images/13.jpg';
+import img14 from '../assets/images/14.jpg';
+import img15 from '../assets/images/15.jpg';
+import img16 from '../assets/images/16.jpg';
+import img17 from '../assets/images/17.jpg';
+import img18 from '../assets/images/18.jpg';
+import img19 from '../assets/images/19.jpg';
+import img20 from '../assets/images/20.jpg';
+import img21 from '../assets/images/21.jpg';
+import img22 from '../assets/images/22.jpg';
+import img23 from '../assets/images/23.jpg';
+import img24 from '../assets/images/24.jpg';
+
+
 
 
 
@@ -35,6 +51,20 @@ const galleryImages = [
   { src: img08, alt: 'Arte contemporáneo' },
   { src: img09, alt: 'Cultura local' },
   { src: img10, alt: 'Experiencias únicas' },
+  { src: img11, alt: 'Naturaleza y entornos' },
+  { src: img12, alt: 'Arquitectura moderna' },
+  { src: img13, alt: 'Tecnología y diseño' },
+  { src: img14, alt: 'Moda y estilo' },
+  { src: img15, alt: 'Comida y gastronomía' },
+  { src: img16, alt: 'Música y entretenimiento' },
+  { src: img17, alt: 'Deportes y actividades' },
+  { src: img18, alt: 'Viajes y aventuras' },  
+  { src: img19, alt: 'Arte callejero' },
+  { src: img20, alt: 'Cultura urbana' },
+  { src: img21, alt: 'Paisajes naturales' },
+  { src: img22, alt: 'Arquitectura histórica' },
+  { src: img23, alt: 'Eventos y festivales' },
+  { src: img24, alt: 'Fotografía artística' },
 ];
 
 export default function GallerySection() {
