@@ -36,7 +36,7 @@ import img21 from '../assets/images/21.jpg';
 import img22 from '../assets/images/22.jpg';
 import img23 from '../assets/images/23.jpg';
 import img24 from '../assets/images/24.jpg';
-
+import img25 from '../assets/images/25.jpeg';
 
 
 
@@ -65,6 +65,7 @@ const galleryImages = [
   { src: img22, alt: 'Arquitectura histórica' },
   { src: img23, alt: 'Eventos y festivales' },
   { src: img24, alt: 'Fotografía artística' },
+
 ];
 
 export default function GallerySection() {
